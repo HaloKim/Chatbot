@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        반갑습니다 !
+    </title>
+</head>
+<body>
+    <form method="POST" action="/calculate">
+        <h1> Flask Seq2Seq</h1>
+        <h5> 테스트 로컬 페이지</h5>
+        <h3> 궁금한 정보를 검색하세요</br></h3>
+        <input type="text" name="qna">
+        <button type="submit">검색하기</button>
+    </form>
+    <div>
+        <p>
+            {% if qna == None %}
+                <h5> 입력해주세요. </h5>
+            {% else %}
+                <p>{{qna}}</br></p>
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>
